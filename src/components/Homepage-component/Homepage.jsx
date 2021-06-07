@@ -1,22 +1,14 @@
 import React from 'react';
+import './homepage.scss';
+import Directory from '../directory-component/directory.jsx'
 
 
 
 const homepage = () => {
     return (
         <div className="homepage">
-            <div className="directory-menu">
-                <div className="menu-item">
-                    <div className="content">
-                        <div className="title">
-                            <div className="sub-title">
-                             <h1>Hats</h1>
-                             <span>Shop Now</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Directory />
+           
         </div>
     )
 }
