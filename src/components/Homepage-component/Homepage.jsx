@@ -4,7 +4,7 @@ import Directory from '../directory-component/directory.jsx'
 
 
 
-const homepage = () => {
+const Homepage = () => {
     return (
         <div className="homepage">
             <Directory />
@@ -13,4 +13,4 @@ const homepage = () => {
     )
 }
 
-export default homepage;
+export default Homepage;
