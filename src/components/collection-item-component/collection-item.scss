@@ -4,6 +4,7 @@
     flex-direction: column;
     height: 350px;
     align-items: center;
+    transition: transform .2s;
   
     .image {
       width: 100%;
@@ -11,6 +12,8 @@
       background-size: cover;
       background-position: center;
       margin-bottom: 5px;
+      
+
     }
   
     .collection-footer {
@@ -31,5 +34,10 @@
         font-weight: bolder;
       }
     }
+
+    &:hover{
+        cursor: pointer;  
+        transform: scale(1.1); 
+      }
   }
   

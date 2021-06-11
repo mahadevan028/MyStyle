@@ -4,12 +4,16 @@ import Directory from '../directory-component/directory.jsx'
 
 
 
+
 const Homepage = () => {
     return (
+        <>
+        
         <div className="homepage">
+       
             <Directory />
            
-        </div>
+        </div></>
     )
 }
 

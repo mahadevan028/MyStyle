@@ -2,6 +2,7 @@ import React from 'react';
 import Collection from '../collection-component/collection';
 
 import SHOP_DATA from './shop.data';
+import './shoppage.scss';
 
 
 
