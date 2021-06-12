@@ -12,7 +12,7 @@ const navigation = ({currentUser}) => {
            <img className="logo" style={{ height: 68, width: 70 }} src={Logo} alt="logo"/>
              </Link>
           <div className = "options">
-              <Link exact  className="option"  to="/shop">
+              <Link className="option"  to="/shop">
               SHOP
               </Link>
                 {currentUser ? 
