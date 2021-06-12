@@ -2,8 +2,9 @@ import React from 'react';
 import { Link} from 'react-router-dom';
 import './navigation.scss';
 import Logo from '../../assets/MyStyleLogo.jpg';
+import {auth} from '../../firebase/firebase.utils.js';
 
-const navigation = () => {
+const navigation = ({currentUser}) => {
 
     return (
         <div className='header'>
@@ -14,12 +15,15 @@ const navigation = () => {
               <Link exact  className="option"  to="/shop">
               SHOP
               </Link>
-              {/* <Link className = "option" to="/shop"> */}
-              {/* CONTACT */}
-              {/* </Link> */}
-              <Link exact className="option"  to="/user">
-              SignIn
-              </Link>
+                {currentUser ? 
+                <div className="option" onClick={() => auth.signOut()}>Sign Out</div> 
+                :
+                <Link className="option" to="/user">
+                        Sign In
+                </Link>
+
+                }
+ 
           </div>
         </div>
 
