@@ -3,6 +3,7 @@ import { Link} from 'react-router-dom';
 import './navigation.scss';
 import Logo from '../../assets/MyStyleLogo.jpg';
 import {auth} from '../../firebase/firebase.utils.js';
+import {connect} from 'react-redux';
 
 const navigation = ({currentUser}) => {
 
@@ -31,5 +32,8 @@ const navigation = ({currentUser}) => {
     )
 
 }
+const mapStateToProps = (state) => {
+  return {currentUser: state.user.currentUser}
+}
 
-export default navigation;
+export default connect(mapStateToProps)(navigation);
