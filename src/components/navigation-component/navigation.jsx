@@ -4,8 +4,10 @@ import './navigation.scss';
 import Logo from '../../assets/MyStyleLogo.jpg';
 import {auth} from '../../firebase/firebase.utils.js';
 import {connect} from 'react-redux';
+import CartIcon from '../cart-icon-component/cart-icon.jsx';
+import CartDropdown from '../cart-dropdown-component/cart-dropdown';
 
-const navigation = ({currentUser}) => {
+const navigation = ({currentUser, isHidden}) => {
 
     return (
         <div className='header'>
@@ -24,8 +26,17 @@ const navigation = ({currentUser}) => {
                 </Link>
 
                 }
+
+              <CartIcon/>
+
+                
  
           </div>
+          {
+            isHidden ? null : <CartDropdown /> 
+          }
+          
+         
         </div>
 
 
@@ -33,7 +44,10 @@ const navigation = ({currentUser}) => {
 
 }
 const mapStateToProps = (state) => {
-  return {currentUser: state.user.currentUser}
+  return {
+    currentUser: state.user.currentUser,
+    isHidden: state.cart.isHidden
+  }
 }
 
 export default connect(mapStateToProps)(navigation);
