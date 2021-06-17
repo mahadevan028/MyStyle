@@ -5,6 +5,7 @@ import {Route, Redirect} from 'react-router-dom';
 import ShopPage from './components/shoppage-component/shoppage.jsx'; 
 import Navigation from './components/navigation-component/navigation.jsx';
 import UserPage from './components/userpage-component/userpage.jsx';
+import CheckoutPage from './components/checkoutpage-component/checkoutpage';
 import {auth,createUserProfileDocument} from './firebase/firebase.utils.js'
 import {connect} from 'react-redux';
 import { setCurrentUser } from './redux/user/user-actions';
@@ -45,6 +46,7 @@ class App extends React.Component {
         <Navigation />
         <Route exact path='/' component={HomePage} />
         <Route  path='/shop' component={ShopPage} />
+        <Route  exact path='/checkout' component={CheckoutPage} />
         <Route  exact path='/user' render = {() => currentUser ? <Redirect to='/'></Redirect> : <UserPage/>} />
 
       </div>
