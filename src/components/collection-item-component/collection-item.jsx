@@ -19,7 +19,7 @@ const collectionItem = ({item, setCartItems}) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    setCartItems: items => dispatch(setCartItems(items))
+    setCartItems: item => dispatch(setCartItems(item))
   }
 }
 

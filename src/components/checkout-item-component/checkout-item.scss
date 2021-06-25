@@ -24,12 +24,31 @@
     }
   
     .quantity {
-      padding-left: 20px;
+      display: flex;
+
+      .arrow{
+        cursor: pointer;
+        transition: transform .2s;
+
+        &:hover{ 
+           transform: scale(1.2); 
+        }
+      }
+
+      .value{
+        margin: 0 10px;
+      }
     }
   
     .remove-button {
       padding-left: 12px;
       cursor: pointer;
+      color: red;
+      transition: transform .2s;
+
+      &:hover{ 
+        transform: scale(1.2); 
+      }
     }
   }
   

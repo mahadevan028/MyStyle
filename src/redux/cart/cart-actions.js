@@ -6,9 +6,23 @@ export const setToggleDropDown = () => {
     }
 }
 
-export const setCartItems = (items) => {
+export const setCartItems = (item) => {
     return {
         type: CartActionTypes.SET_CART_ITEMS,
-        payload: items
+        payload: item
+    }
+}
+
+export const setRemoveCartItems = (item) => {
+    return {
+        type: CartActionTypes.REMOVE_CART_ITEMS,
+        payload: item
+    }
+}
+
+export const setDecreaseCartItems = (item) => {
+    return {
+        type:CartActionTypes.DECREASE_CART_ITEMS,
+        payload:item
     }
 }

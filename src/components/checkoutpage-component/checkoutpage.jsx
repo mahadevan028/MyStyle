@@ -26,7 +26,11 @@ return(
                       <span>Remove</span>
                     </div>
             </div>
-            {cartItems.map(item => <CheckoutItem cartItem={item}/>)}
+
+            {!!cartItems.length?
+             cartItems.map(item => <CheckoutItem cartItem={item}/>) : 
+             <div className="empty-cart">Cart is Empty!</div>
+            }
             <div className="total">
                     <span>
                          TOTAL: &#8377; {totalPrice}
