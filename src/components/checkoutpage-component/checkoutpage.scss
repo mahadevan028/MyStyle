@@ -37,5 +37,26 @@
       font-size: 36px;
       font-weight: bolder;
     }
+
+    .test-warning{
+      font-size: 30px;
+      color: red;
+      font-weight: bold;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    button{
+      margin-left: auto;
+      margin-top: 50px;
+      align-self: center;
+     
+    }
+
+    .payment{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   
