@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import HomePage from './components/homepage-component/homepage.jsx';
+import HomePage from './components/Homepage-component/Homepage.jsx';
 import {Route, Redirect} from 'react-router-dom';
 import ShopPage from './components/shoppage-component/shoppage.jsx'; 
 import Navigation from './components/navigation-component/navigation.jsx';
