@@ -5,13 +5,16 @@ import App from './App';
 import 'font-awesome/css/font-awesome.min.css';
 import { BrowserRouter } from "react-router-dom";
 import {Provider} from 'react-redux'; 
-import store from './redux/store.js';
+import {store, persister} from './redux/store.js';
+import { PersistGate } from 'redux-persist/integration/react';
 
 ReactDOM.render(
   <Provider store = {store}>
   <React.StrictMode>
     <BrowserRouter>
+    <PersistGate persistor={persister}>
     <App />
+    </PersistGate>
     </BrowserRouter>
   </React.StrictMode>
   </Provider>,
