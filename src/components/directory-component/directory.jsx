@@ -5,7 +5,6 @@ import {selectDirectorySections} from  '../../redux/directory/directory-selector
 import {connect}  from 'react-redux';
 
 const Directory = ({sections}) => {
-  console.log("$$$$$$$$$$$$$$",sections)
   return (
     <div className="directory-menu">
       {
